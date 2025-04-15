@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<div class="section-title">
+    <h2><span>{{ page.title }}</span></h2>
+</div>
+
+<div class="row listrecent">
+  {% assign category_posts = site.categories[page.category] %}
+  {% for post in category_posts %}
+    {% include postbox.html %}
+  {% endfor %}
+</div>

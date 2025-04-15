@@ -61,27 +61,38 @@ ga('send', 'pageview');
 
         <!-- Begin Menu -->
 
-            <ul class="navbar-nav ml-auto">
-
-                {% if page.url == "/" %}
-                <li class="nav-item active">
-                {% else %}
-                <li class="nav-item">
-                {% endif %}
-                <a class="nav-link" href="{{ site.baseurl }}/index.html">Blog</a>
-                </li>
-
-                <li class="nav-item">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ site.baseurl }}/">All Posts</a>
+            </li>
+        
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarCategories" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarCategories">
+                    <a class="dropdown-item" href="{{ site.baseurl }}/categories/music/">Music</a>
+                    <a class="dropdown-item" href="{{ site.baseurl }}/categories/games/">Games</a>
+                    <a class="dropdown-item" href="{{ site.baseurl }}/categories/books/">Books</a>
+                    <a class="dropdown-item" href="{{ site.baseurl }}/categories/travel/">Travel</a>
+                    <a class="dropdown-item" href="{{ site.baseurl }}/categories/world-news/">World News</a>
+                    <a class="dropdown-item" href="{{ site.baseurl }}/categories/technology/">Technology</a>
+                    <a class="dropdown-item" href="{{ site.baseurl }}/categories/cars/">Cars</a>
+                </div>
+            </li>
+        
+            <li class="nav-item">
                 <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
-                </li>
-
-                <li class="nav-item">
-                <a target="_blank" class="nav-link" href="https://github.com/henrysg1/the-everything-blog"><i class="fab fa-github"></i> See the source code</a>
-                </li>
-
-                {% include search-lunr.html %}
-
-            </ul>
+            </li>
+        
+            <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/henrysg1/the-everything-blog">
+                <i class="fab fa-github"></i> See the source code
+                </a>
+            </li>
+        
+            {% include search-lunr.html %}
+        </ul>
 
         <!-- End Menu -->
 
